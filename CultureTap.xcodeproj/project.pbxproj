@@ -1,0 +1,593 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BABB7A792C962220006EF040 /* CultureTapApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABB7A782C962220006EF040 /* CultureTapApp.swift */; };
+		BABB7A7B2C962220006EF040 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABB7A7A2C962220006EF040 /* ContentView.swift */; };
+		BABB7A7D2C962222006EF040 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BABB7A7C2C962222006EF040 /* Assets.xcassets */; };
+		BABB7A802C962222006EF040 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BABB7A7F2C962222006EF040 /* Preview Assets.xcassets */; };
+		BABB7A8A2C962222006EF040 /* CultureTapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABB7A892C962222006EF040 /* CultureTapTests.swift */; };
+		BABB7A942C962222006EF040 /* CultureTapUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABB7A932C962222006EF040 /* CultureTapUITests.swift */; };
+		BABB7A962C962222006EF040 /* CultureTapUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABB7A952C962222006EF040 /* CultureTapUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BABB7A862C962222006EF040 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BABB7A6D2C962220006EF040 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BABB7A742C962220006EF040;
+			remoteInfo = CultureTap;
+		};
+		BABB7A902C962222006EF040 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BABB7A6D2C962220006EF040 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BABB7A742C962220006EF040;
+			remoteInfo = CultureTap;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		BABB7A752C962220006EF040 /* CultureTap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CultureTap.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BABB7A782C962220006EF040 /* CultureTapApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CultureTapApp.swift; sourceTree = "<group>"; };
+		BABB7A7A2C962220006EF040 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		BABB7A7C2C962222006EF040 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BABB7A7F2C962222006EF040 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		BABB7A852C962222006EF040 /* CultureTapTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CultureTapTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BABB7A892C962222006EF040 /* CultureTapTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CultureTapTests.swift; sourceTree = "<group>"; };
+		BABB7A8F2C962222006EF040 /* CultureTapUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CultureTapUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BABB7A932C962222006EF040 /* CultureTapUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CultureTapUITests.swift; sourceTree = "<group>"; };
+		BABB7A952C962222006EF040 /* CultureTapUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CultureTapUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BABB7A722C962220006EF040 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BABB7A822C962222006EF040 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BABB7A8C2C962222006EF040 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BABB7A6C2C962220006EF040 = {
+			isa = PBXGroup;
+			children = (
+				BABB7A772C962220006EF040 /* CultureTap */,
+				BABB7A882C962222006EF040 /* CultureTapTests */,
+				BABB7A922C962222006EF040 /* CultureTapUITests */,
+				BABB7A762C962220006EF040 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BABB7A762C962220006EF040 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BABB7A752C962220006EF040 /* CultureTap.app */,
+				BABB7A852C962222006EF040 /* CultureTapTests.xctest */,
+				BABB7A8F2C962222006EF040 /* CultureTapUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BABB7A772C962220006EF040 /* CultureTap */ = {
+			isa = PBXGroup;
+			children = (
+				BABB7A782C962220006EF040 /* CultureTapApp.swift */,
+				BABB7A7A2C962220006EF040 /* ContentView.swift */,
+				BABB7A7C2C962222006EF040 /* Assets.xcassets */,
+				BABB7A7E2C962222006EF040 /* Preview Content */,
+			);
+			path = CultureTap;
+			sourceTree = "<group>";
+		};
+		BABB7A7E2C962222006EF040 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				BABB7A7F2C962222006EF040 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		BABB7A882C962222006EF040 /* CultureTapTests */ = {
+			isa = PBXGroup;
+			children = (
+				BABB7A892C962222006EF040 /* CultureTapTests.swift */,
+			);
+			path = CultureTapTests;
+			sourceTree = "<group>";
+		};
+		BABB7A922C962222006EF040 /* CultureTapUITests */ = {
+			isa = PBXGroup;
+			children = (
+				BABB7A932C962222006EF040 /* CultureTapUITests.swift */,
+				BABB7A952C962222006EF040 /* CultureTapUITestsLaunchTests.swift */,
+			);
+			path = CultureTapUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BABB7A742C962220006EF040 /* CultureTap */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BABB7A992C962222006EF040 /* Build configuration list for PBXNativeTarget "CultureTap" */;
+			buildPhases = (
+				BABB7A712C962220006EF040 /* Sources */,
+				BABB7A722C962220006EF040 /* Frameworks */,
+				BABB7A732C962220006EF040 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CultureTap;
+			productName = CultureTap;
+			productReference = BABB7A752C962220006EF040 /* CultureTap.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BABB7A842C962222006EF040 /* CultureTapTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BABB7A9C2C962222006EF040 /* Build configuration list for PBXNativeTarget "CultureTapTests" */;
+			buildPhases = (
+				BABB7A812C962222006EF040 /* Sources */,
+				BABB7A822C962222006EF040 /* Frameworks */,
+				BABB7A832C962222006EF040 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BABB7A872C962222006EF040 /* PBXTargetDependency */,
+			);
+			name = CultureTapTests;
+			productName = CultureTapTests;
+			productReference = BABB7A852C962222006EF040 /* CultureTapTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		BABB7A8E2C962222006EF040 /* CultureTapUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BABB7A9F2C962222006EF040 /* Build configuration list for PBXNativeTarget "CultureTapUITests" */;
+			buildPhases = (
+				BABB7A8B2C962222006EF040 /* Sources */,
+				BABB7A8C2C962222006EF040 /* Frameworks */,
+				BABB7A8D2C962222006EF040 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BABB7A912C962222006EF040 /* PBXTargetDependency */,
+			);
+			name = CultureTapUITests;
+			productName = CultureTapUITests;
+			productReference = BABB7A8F2C962222006EF040 /* CultureTapUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BABB7A6D2C962220006EF040 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1540;
+				LastUpgradeCheck = 1540;
+				TargetAttributes = {
+					BABB7A742C962220006EF040 = {
+						CreatedOnToolsVersion = 15.4;
+					};
+					BABB7A842C962222006EF040 = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = BABB7A742C962220006EF040;
+					};
+					BABB7A8E2C962222006EF040 = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = BABB7A742C962220006EF040;
+					};
+				};
+			};
+			buildConfigurationList = BABB7A702C962220006EF040 /* Build configuration list for PBXProject "CultureTap" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BABB7A6C2C962220006EF040;
+			productRefGroup = BABB7A762C962220006EF040 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BABB7A742C962220006EF040 /* CultureTap */,
+				BABB7A842C962222006EF040 /* CultureTapTests */,
+				BABB7A8E2C962222006EF040 /* CultureTapUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BABB7A732C962220006EF040 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BABB7A802C962222006EF040 /* Preview Assets.xcassets in Resources */,
+				BABB7A7D2C962222006EF040 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BABB7A832C962222006EF040 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BABB7A8D2C962222006EF040 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BABB7A712C962220006EF040 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BABB7A7B2C962220006EF040 /* ContentView.swift in Sources */,
+				BABB7A792C962220006EF040 /* CultureTapApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BABB7A812C962222006EF040 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BABB7A8A2C962222006EF040 /* CultureTapTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BABB7A8B2C962222006EF040 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BABB7A942C962222006EF040 /* CultureTapUITests.swift in Sources */,
+				BABB7A962C962222006EF040 /* CultureTapUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BABB7A872C962222006EF040 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BABB7A742C962220006EF040 /* CultureTap */;
+			targetProxy = BABB7A862C962222006EF040 /* PBXContainerItemProxy */;
+		};
+		BABB7A912C962222006EF040 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BABB7A742C962220006EF040 /* CultureTap */;
+			targetProxy = BABB7A902C962222006EF040 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		BABB7A972C962222006EF040 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BABB7A982C962222006EF040 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BABB7A9A2C962222006EF040 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"CultureTap/Preview Content\"";
+				DEVELOPMENT_TEAM = 8S86367NT3;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vthacks.CultureTap;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BABB7A9B2C962222006EF040 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"CultureTap/Preview Content\"";
+				DEVELOPMENT_TEAM = 8S86367NT3;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vthacks.CultureTap;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		BABB7A9D2C962222006EF040 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8S86367NT3;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vthacks.CultureTapTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CultureTap.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/CultureTap";
+			};
+			name = Debug;
+		};
+		BABB7A9E2C962222006EF040 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8S86367NT3;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vthacks.CultureTapTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CultureTap.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/CultureTap";
+			};
+			name = Release;
+		};
+		BABB7AA02C962222006EF040 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8S86367NT3;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vthacks.CultureTapUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CultureTap;
+			};
+			name = Debug;
+		};
+		BABB7AA12C962222006EF040 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8S86367NT3;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vthacks.CultureTapUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CultureTap;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BABB7A702C962220006EF040 /* Build configuration list for PBXProject "CultureTap" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BABB7A972C962222006EF040 /* Debug */,
+				BABB7A982C962222006EF040 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BABB7A992C962222006EF040 /* Build configuration list for PBXNativeTarget "CultureTap" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BABB7A9A2C962222006EF040 /* Debug */,
+				BABB7A9B2C962222006EF040 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BABB7A9C2C962222006EF040 /* Build configuration list for PBXNativeTarget "CultureTapTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BABB7A9D2C962222006EF040 /* Debug */,
+				BABB7A9E2C962222006EF040 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BABB7A9F2C962222006EF040 /* Build configuration list for PBXNativeTarget "CultureTapUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BABB7AA02C962222006EF040 /* Debug */,
+				BABB7AA12C962222006EF040 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BABB7A6D2C962220006EF040 /* Project object */;
+}
