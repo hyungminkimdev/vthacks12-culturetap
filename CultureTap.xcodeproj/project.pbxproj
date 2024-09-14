@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		BA1CBBEA2C96290F0043CDED /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1CBBE92C96290F0043CDED /* ProfileView.swift */; };
 		BA1CBBEC2C962B1E0043CDED /* ConfirmView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1CBBEB2C962B1E0043CDED /* ConfirmView.swift */; };
+		BA1CBBEF2C962E900043CDED /* ColorMultipeerSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1CBBEE2C962E900043CDED /* ColorMultipeerSession.swift */; };
 		BABB7A792C962220006EF040 /* CultureTapApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABB7A782C962220006EF040 /* CultureTapApp.swift */; };
 		BABB7A7B2C962220006EF040 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABB7A7A2C962220006EF040 /* ContentView.swift */; };
 		BABB7A7D2C962222006EF040 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BABB7A7C2C962222006EF040 /* Assets.xcassets */; };
@@ -38,6 +39,8 @@
 /* Begin PBXFileReference section */
 		BA1CBBE92C96290F0043CDED /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		BA1CBBEB2C962B1E0043CDED /* ConfirmView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmView.swift; sourceTree = "<group>"; };
+		BA1CBBED2C962CFD0043CDED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		BA1CBBEE2C962E900043CDED /* ColorMultipeerSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorMultipeerSession.swift; sourceTree = "<group>"; };
 		BABB7A752C962220006EF040 /* CultureTap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CultureTap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BABB7A782C962220006EF040 /* CultureTapApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CultureTapApp.swift; sourceTree = "<group>"; };
 		BABB7A7A2C962220006EF040 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -98,9 +101,11 @@
 		BABB7A772C962220006EF040 /* CultureTap */ = {
 			isa = PBXGroup;
 			children = (
+				BA1CBBED2C962CFD0043CDED /* Info.plist */,
 				BABB7A782C962220006EF040 /* CultureTapApp.swift */,
 				BABB7A7A2C962220006EF040 /* ContentView.swift */,
 				BA1CBBEB2C962B1E0043CDED /* ConfirmView.swift */,
+				BA1CBBEE2C962E900043CDED /* ColorMultipeerSession.swift */,
 				BA1CBBE92C96290F0043CDED /* ProfileView.swift */,
 				BABB7A7C2C962222006EF040 /* Assets.xcassets */,
 				BABB7A7E2C962222006EF040 /* Preview Content */,
@@ -263,6 +268,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA1CBBEF2C962E900043CDED /* ColorMultipeerSession.swift in Sources */,
 				BABB7A7B2C962220006EF040 /* ContentView.swift in Sources */,
 				BA1CBBEC2C962B1E0043CDED /* ConfirmView.swift in Sources */,
 				BA1CBBEA2C96290F0043CDED /* ProfileView.swift in Sources */,
@@ -433,6 +439,8 @@
 				DEVELOPMENT_TEAM = 8S86367NT3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CultureTap/Info.plist;
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "This app needs your permission to use local network.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -462,6 +470,8 @@
 				DEVELOPMENT_TEAM = 8S86367NT3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CultureTap/Info.plist;
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "This app needs your permission to use local network.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
