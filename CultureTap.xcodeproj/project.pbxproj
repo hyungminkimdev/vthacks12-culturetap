@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		621FBC422C967D2C0060EF23 /* ConnectDevicesSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 621FBC412C967D2C0060EF23 /* ConnectDevicesSession.swift */; };
+		621FBC442C967DF30060EF23 /* ConnectionReadyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 621FBC432C967DF30060EF23 /* ConnectionReadyView.swift */; };
 		BA1CBBEA2C96290F0043CDED /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1CBBE92C96290F0043CDED /* ProfileView.swift */; };
 		BA1CBBEC2C962B1E0043CDED /* ConfirmView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1CBBEB2C962B1E0043CDED /* ConfirmView.swift */; };
 		BA1CBBEF2C962E900043CDED /* ColorMultipeerSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1CBBEE2C962E900043CDED /* ColorMultipeerSession.swift */; };
@@ -40,6 +41,7 @@
 
 /* Begin PBXFileReference section */
 		621FBC412C967D2C0060EF23 /* ConnectDevicesSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectDevicesSession.swift; sourceTree = "<group>"; };
+		621FBC432C967DF30060EF23 /* ConnectionReadyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionReadyView.swift; sourceTree = "<group>"; };
 		BA1CBBE92C96290F0043CDED /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		BA1CBBEB2C962B1E0043CDED /* ConfirmView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmView.swift; sourceTree = "<group>"; };
 		BA1CBBED2C962CFD0043CDED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 				BABB7A7E2C962222006EF040 /* Preview Content */,
 				BA1CBC022C96413A0043CDED /* ColorExtension.swift */,
 				621FBC412C967D2C0060EF23 /* ConnectDevicesSession.swift */,
+				621FBC432C967DF30060EF23 /* ConnectionReadyView.swift */,
 			);
 			path = CultureTap;
 			sourceTree = "<group>";
@@ -278,6 +281,7 @@
 				BA1CBBEF2C962E900043CDED /* ColorMultipeerSession.swift in Sources */,
 				BABB7A7B2C962220006EF040 /* ContentView.swift in Sources */,
 				BA1CBBEC2C962B1E0043CDED /* ConfirmView.swift in Sources */,
+				621FBC442C967DF30060EF23 /* ConnectionReadyView.swift in Sources */,
 				BA1CBC032C96413A0043CDED /* ColorExtension.swift in Sources */,
 				BA1CBBEA2C96290F0043CDED /* ProfileView.swift in Sources */,
 				BABB7A792C962220006EF040 /* CultureTapApp.swift in Sources */,
