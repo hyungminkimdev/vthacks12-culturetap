@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct FunFactsView: View {
-    @ObservedObject var userprofile: UserProfile
+    @ObservedObject var userProfile: UserProfile
     @State private var textInput: String = ""
 
     var body: some View {
@@ -25,7 +25,7 @@ struct FunFactsView: View {
                 .padding(.horizontal)
                 .textInputAutocapitalization(.never)
                 .onChange(of: textInput) { newValue in
-                    userprofile.funFacts = newValue
+                    userProfile.funFacts = newValue
                 }
         }
         .background(Color.background)

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct NameView: View {
-    @ObservedObject var userprofile: UserProfile
+    @ObservedObject var userProfile: UserProfile
     @State var textInput: String = ""
     
     var body: some View {
@@ -25,7 +25,7 @@ struct NameView: View {
                 .padding(.horizontal)
                 .textInputAutocapitalization(.never)
                 .onChange(of: textInput) { newValue in
-                                    userprofile.name = newValue
+                                    userProfile.name = newValue
                                 }
         }
         

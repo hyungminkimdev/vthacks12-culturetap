@@ -148,5 +148,3 @@ extension ConnectDevicesSession: MCSessionDelegate {
         log.error("Receiving resources is not supported")
     }
 }
-
-

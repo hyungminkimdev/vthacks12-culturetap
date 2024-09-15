@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct AgeView: View {
-    @ObservedObject var userprofile: UserProfile
+    @ObservedObject var userProfile: UserProfile
     @State var textInput: String = ""
 
     var body: some View {
@@ -26,7 +26,7 @@ struct AgeView: View {
                 .textInputAutocapitalization(.never)
                 .onChange(of: textInput) { newValue in
                                     if let age = Int(newValue) {
-                                        userprofile.age = age
+                                        userProfile.age = age
                                     }
                                 }
         }

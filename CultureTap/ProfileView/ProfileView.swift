@@ -2,7 +2,7 @@ import SwiftUI
 
 struct ProfileView: View {
     @State var currentStep: Int = 0
-    @ObservedObject var userprofile: UserProfile
+    @ObservedObject var userProfile: UserProfile
     
     // This state will control the navigation
     @State private var navigateToConnectionReady = false
@@ -22,17 +22,17 @@ struct ProfileView: View {
                 
                 switch currentStep {
                 case 0:
-                    NameView(userprofile: userprofile)
+                    NameView(userProfile: userProfile)
                 case 1:
-                    AgeView(userprofile: userprofile)
+                    AgeView(userProfile: userProfile)
                 case 2:
-                    CountryView(userprofile: userprofile)
+                    CountryView(userProfile: userProfile)
                 case 3:
-                    HobbiesView(userprofile: userprofile)
+                    HobbiesView(userProfile: userProfile)
                 case 4:
-                    MBTIView(userprofile: userprofile)
+                    MBTIView(userProfile: userProfile)
                 case 5:
-                    FunFactsView(userprofile: userprofile)
+                    FunFactsView(userProfile: userProfile)
                 default:
                     EmptyView()
                 }
@@ -46,7 +46,7 @@ struct ProfileView: View {
                         // Navigate to ConnectionReadyView when on the last step
                         navigateToConnectionReady = true
                     }
-                    print("Name: \(userprofile.name), Age: \(userprofile.age), City: \(userprofile.country), Hobbies: \(userprofile.hobbies), FunFacts: \(userprofile.funFacts), MBTI: \(userprofile.mbti)")
+                    print("Name: \(userProfile.name), Age: \(userProfile.age), City: \(userProfile.country), Hobbies: \(userProfile.hobbies), FunFacts: \(userProfile.funFacts), MBTI: \(userProfile.mbti)")
                 }) {
                     Text("Next")
                         .font(.headline)

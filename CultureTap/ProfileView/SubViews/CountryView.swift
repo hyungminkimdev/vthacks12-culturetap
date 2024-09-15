@@ -9,7 +9,7 @@ import SwiftUI
 
 
 struct CountryView: View {
-    @ObservedObject var userprofile: UserProfile
+    @ObservedObject var userProfile: UserProfile
     @State private var selectedCountry = "United States"
     
     let countries = [
@@ -41,7 +41,7 @@ struct CountryView: View {
             .pickerStyle(MenuPickerStyle())
             .padding()
             .onChange(of: selectedCountry) { newValue in
-                userprofile.country = newValue
+                userProfile.country = newValue
             }
             
         }
