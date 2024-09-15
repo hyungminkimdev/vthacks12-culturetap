@@ -44,7 +44,7 @@ struct QuizResultView: View {
                     .font(.headline)
                     .frame(maxWidth: .infinity)
                     .padding()
-                    .background(Color.keyColor)
+                    .background(Color.mint)
                     .foregroundColor(.white)
                     .cornerRadius(10)
             }
@@ -59,10 +59,6 @@ struct QuizResultView: View {
         }
     }
 }
-//#Preview {
-//    let mockUserProfile = UserProfile(name: "John Doe", age: 30, country: "USA", hobbies: "Reading, Hiking", mbti: "INTJ", funFacts: "Loves traveling")
-//    QuizResultView(userprofile: mockUserProfile)
-//}
 
 struct QuizResultView_Previews: PreviewProvider {
     static var previews: some View {

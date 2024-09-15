@@ -17,11 +17,12 @@ struct Question: Codable, Identifiable {
 }
 
 struct QuizView: View {
+    @State private var navigateToQuiz = false
     @State private var quizData: QuizData
     @State private var selectedAnswers: [Int: String] = [:]
     @State private var showResult = false
     @State private var score = 0
-
+    
     init() {
         // Initialize with your JSON data
         let jsonString = """
@@ -75,64 +76,80 @@ struct QuizView: View {
         let jsonData = Data(jsonString.utf8)
         self._quizData = State(initialValue: try! JSONDecoder().decode(QuizData.self, from: jsonData))
     }
-
+    
     var body: some View {
-        ZStack {
-            Color.black.edgesIgnoringSafeArea(.all)
-            
-            ScrollView {
-                VStack(spacing: 20) {
-                    Text(quizData.quiz.title)
-                        .font(.title)
-                        .foregroundColor(.white)
-                        .padding()
-                    
-                    ForEach(Array(quizData.quiz.questions.enumerated()), id: \.element.id) { index, question in
-                        VStack(alignment: .leading, spacing: 10) {
-                            Text("Q\(index + 1)) \(question.question)")
-                                .foregroundColor(.white)
-                                .padding(.horizontal)
-                            
-                            ForEach(question.options, id: \.self) { option in
-                                Button(action: {
-                                    selectedAnswers[index] = option
-                                }) {
-                                    Text(option)
-                                        .foregroundColor(.white)
-                                        .padding()
-                                        .frame(maxWidth: .infinity, alignment: .leading)
-                                        .background(selectedAnswers[index] == option ? Color.blue : Color.gray)
-                                        .cornerRadius(10)
-                                }
+        ScrollView {
+            VStack(spacing: 20) {
+                Text(quizData.quiz.title)
+                    .font(.title)
+                    .foregroundColor(.white)
+                    .padding()
+                
+                ForEach(Array(quizData.quiz.questions.enumerated()), id: \.element.id) { index, question in
+                    VStack(alignment: .leading, spacing: 10) {
+                        Text("Q\(index + 1)) \(question.question)")
+                            .foregroundColor(.white)
+                            .padding(.horizontal)
+                        
+                        ForEach(question.options, id: \.self) { option in
+                            Button(action: {
+                                selectedAnswers[index] = option
+                            }) {
+                                Text(option)
+                                    .foregroundColor(.white)
+                                    .padding()
+                                    .frame(maxWidth: .infinity, alignment: .leading)
+                                    .background(selectedAnswers[index] == option ? Color.mint : Color.gray)
+                                    .cornerRadius(10)
                             }
                         }
-                        .padding(.bottom)
                     }
-                    
-                    Button("Submit") {
-                        calculateScore()
-                        showResult = true
-                    }
-                    .disabled(selectedAnswers.count < quizData.quiz.questions.count)
-                    .padding()
-                    .background(selectedAnswers.count == quizData.quiz.questions.count ? Color.green : Color.gray)
-                    .foregroundColor(.white)
-                    .cornerRadius(10)
-                    
-                    if showResult {
-                        Text("Quiz Completed!")
-                            .font(.title)
-                            .foregroundColor(.white)
-                        
-                        Text("Your score: \(score)/\(quizData.quiz.questions.count)")
-                            .foregroundColor(.white)
+                    .padding(.bottom)
+                }
+                
+                NavigationLink(destination: QuizView()) {
+                    Button(action: {
+                        navigateToQuiz = true
+                    }) {
+                        Text("Submit")
+                            .frame(maxWidth: .infinity)
                             .padding()
+                            .background(Color.mint)
+                            .foregroundColor(.white)
+                            .cornerRadius(8)
                     }
                 }
-                .padding()
+                .buttonStyle(PlainButtonStyle())
+                
+                
+//                Button("Submit") {
+//                    calculateScore()
+//                    showResult = true
+//                }
+//                .disabled(selectedAnswers.count < quizData.quiz.questions.count)
+//                .padding()
+//                .background(selectedAnswers.count == quizData.quiz.questions.count ? Color.mint : Color.gray)
+//                .foregroundColor(.white)
+//                .cornerRadius(10)
+//                .frame(maxWidth: .infinity)
+                
+//                if showResult {
+//                    Text("Quiz Completed!")
+//                        .font(.title)
+//                        .foregroundColor(.white)
+//                    
+//                    Text("Your score: \(score)/\(quizData.quiz.questions.count)")
+//                        .foregroundColor(.white)
+//                        .padding()
+//                }
             }
+            .padding()
         }
+        .background {
+            Color.background
+                .ignoresSafeArea()
     }
+}
     
     private func calculateScore() {
         score = 0

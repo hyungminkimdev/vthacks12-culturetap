@@ -55,9 +55,7 @@ struct WaitingView: View {
                 }
                 .padding()
             }
-            .navigationTitle("") // You can set a title if needed or leave it empty
         }
-        .navigationViewStyle(StackNavigationViewStyle()) // Ensures consistent behavior across devices
         .navigationBarBackButtonHidden()
     }
 }

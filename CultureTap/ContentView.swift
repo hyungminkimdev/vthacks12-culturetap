@@ -43,7 +43,7 @@ struct ContentView: View {
                         .font(.headline)
                         .frame(maxWidth: .infinity)
                         .padding()
-                        .background(Color.keyColor)
+                        .background(Color.mint)
                         .foregroundColor(.white)
                         .cornerRadius(10)
                 }

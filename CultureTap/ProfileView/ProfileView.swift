@@ -46,13 +46,12 @@ struct ProfileView: View {
                         // Navigate to ConnectionReadyView when on the last step
                         navigateToConnectionReady = true
                     }
-                    print("Name: \(userProfile.name), Age: \(userProfile.age), City: \(userProfile.country), Hobbies: \(userProfile.hobbies), FunFacts: \(userProfile.funFacts), MBTI: \(userProfile.mbti)")
                 }) {
                     Text("Next")
                         .font(.headline)
                         .frame(maxWidth: .infinity)
                         .padding()
-                        .background(Color.keyColor)
+                        .background(Color.mint)
                         .foregroundColor(.white)
                         .cornerRadius(10)
                 }
