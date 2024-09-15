@@ -12,6 +12,7 @@ struct ContentView: View {
     @State private var password: String = ""
     
     var body: some View {
+        NavigationStack {
             VStack {
                 Spacer()
                 
@@ -20,17 +21,23 @@ struct ContentView: View {
                     .frame(width: 320, height: 100)
                     .padding()
                 
+                Spacer()
+                    .frame(height: 60)
+                
                 TextField("ID", text: $id)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .padding(.horizontal)
+                    .textInputAutocapitalization(.never)
                 
                 SecureField("Password", text: $password)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .padding(.horizontal)
+                    .textInputAutocapitalization(.never)
                 
-                Button(action: {
-                    print("Sign Up Button Pressed")
-                }) {
+                Spacer()
+                    .frame(height: 20)
+                
+                NavigationLink(destination: ProfileView()) {
                     Text("Sign Up")
                         .font(.headline)
                         .frame(maxWidth: .infinity)
@@ -39,7 +46,19 @@ struct ContentView: View {
                         .foregroundColor(.white)
                         .cornerRadius(10)
                 }
-                .padding()
+                .padding(.horizontal)
+                
+                Text("OR")
+                    .font(.title3)
+                    .foregroundStyle(Color.white)
+                    .padding(.top, 10)
+                
+                NavigationLink(destination: ProfileView()) {
+                    Image("SignUpApple")
+                        .resizable()
+                        .frame(width: 350, height: 60)
+                        .padding(.horizontal)
+                }
                 
                 Spacer()
             }
@@ -49,6 +68,7 @@ struct ContentView: View {
                 Color.background
                     .ignoresSafeArea()
             }
+        }
     }
 }
 

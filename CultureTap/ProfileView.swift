@@ -8,56 +8,69 @@
 import SwiftUI
 
 struct ProfileView: View {
-    @State private var selectedCountry = "USA"
+    @State private var textInput: String = ""
+    @State private var currentStep: Int = 0
     
+    let labels = ["Name", "Age", "Country", "Hobbies", "MBTI", "Fun Fact"]
+    let placeholders = [
+        "Enter your name",
+        "Enter your age",
+        "Enter your country",
+        "Enter your hobbies",
+        "Enter your MBTI",
+        "Enter a fun fact about you"
+    ]
+
     var body: some View {
-        VStack(spacing: 20) {
+        VStack {
             Spacer()
             
-                Text("CULTURETAP")
-                    .font(.largeTitle)
-                    .fontWeight(.bold)
-                    .foregroundColor(.white)
-            
-            Spacer()
-            
-            VStack(alignment: .leading, spacing: 10) {
-                Text("Select your Country")
-                    .foregroundColor(.white)
-                    .font(.headline)
-                
-                HStack {
-                    Text("USA")
-                        .foregroundColor(.white)
-                    Spacer()
-                    Image(systemName: "chevron.down")
-                        .foregroundColor(.white)
-                }
+            Image("Logo")
+                .resizable()
+                .frame(width: 320, height: 100)
                 .padding()
-                .background(Color.gray.opacity(0.3))
-                .cornerRadius(8)
+            
+            Spacer()
+                .frame(height: 60)
+            
+            HStack {
+                Text(labels[currentStep])
+                    .foregroundStyle(Color.white)
+                Spacer()
             }
             .padding(.horizontal)
             
+            TextField(placeholders[currentStep], text: $textInput)
+                .textFieldStyle(RoundedBorderTextFieldStyle())
+                .padding(.horizontal)
+                .textInputAutocapitalization(.never)
+            
             Spacer()
+                .frame(height: 20)
             
             Button(action: {
-                // Action for Next button
-                print("Next button tapped")
-            }) {
+                if currentStep < labels.count - 1 {
+                    currentStep += 1
+                    textInput = ""  // Clear the text field for the next input
+                }
+            }){
                 Text("Next")
+                    .font(.headline)
                     .frame(maxWidth: .infinity)
                     .padding()
-                    .background(Color.mint)
+                    .background(Color.keyColor)
                     .foregroundColor(.white)
-                    .cornerRadius(8)
+                    .cornerRadius(10)
             }
-            .padding(.horizontal)
-            
+            .padding()
             Spacer()
         }
+        .padding()
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(Color.black.edgesIgnoringSafeArea(.all))
+        .background {
+            Color.background
+                .ignoresSafeArea()
+        }
     }
 }
 
