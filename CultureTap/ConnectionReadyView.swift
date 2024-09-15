@@ -12,36 +12,52 @@ struct ConnectionReadyView: View {
             }
         }    }
 }
-
 struct WaitingView: View {
     var body: some View {
-        ZStack {
-            Color.black.edgesIgnoringSafeArea(.all)
-            
-            VStack(spacing: 20) {
-                ZStack {
-                    Circle()
-                        .fill(Color.mint)
-                        .frame(width: 80, height: 80)
+        NavigationView {
+            ZStack {
+                // Set the entire background to black
+                Color.black
+                    .edgesIgnoringSafeArea(.all)
+                
+                VStack(spacing: 20) {
+                    ZStack {
+                        Circle()
+                            .fill(Color.mint)
+                            .frame(width: 80, height: 80)
+                        
+                        Image(systemName: "checkmark")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 40, height: 40)
+                            .foregroundColor(.white)
+                    }
                     
-                    Image(systemName: "checkmark")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 40, height: 40)
+                    Text("Ready to go!")
+                        .font(.title2)
+                        .fontWeight(.semibold)
                         .foregroundColor(.white)
+                    
+                    Text("We have received your profile. Tap\nwith another phone to connect\nwith them")
+                        .multilineTextAlignment(.center)
+                        .foregroundColor(.gray)
+                        .font(.body)
+                    
+                    NavigationLink(destination: LoadingView()) {
+                        Text("Connect to friends")
+                            .font(.headline)
+                            .frame(maxWidth: .infinity)
+                            .padding()
+                            .background(Color.mint)
+                            .foregroundColor(.white)
+                            .cornerRadius(10)
+                    }
                 }
-                
-                Text("Ready to go !")
-                    .font(.title2)
-                    .fontWeight(.semibold)
-                    .foregroundColor(.white)
-                
-                Text("We have received your profile. Tap\nwith another phone to connect\nwith them")
-                    .multilineTextAlignment(.center)
-                    .foregroundColor(.gray)
-                    .font(.body)
+                .padding()
             }
+            .navigationTitle("") // You can set a title if needed or leave it empty
         }
+        .navigationViewStyle(StackNavigationViewStyle()) // Ensures consistent behavior across devices
     }
 }
 

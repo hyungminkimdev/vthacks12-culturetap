@@ -9,9 +9,27 @@ import SwiftUI
 
 struct LoadingView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack {
+            // Set the background color to black
+            Color.black
+                .edgesIgnoringSafeArea(.all)
+            
+            VStack {
+                Text("Connecting...")
+                    .font(.largeTitle)
+                    .fontWeight(.bold)
+                    .foregroundColor(.white)
+                    .padding()
+                
+                ProgressView()
+                    .progressViewStyle(CircularProgressViewStyle(tint: .mint))
+                    .scaleEffect(2) // Adjusts the size of the progress indicator
+                    .padding()
+            }
+        }
     }
 }
+
 
 #Preview {
     LoadingView()
