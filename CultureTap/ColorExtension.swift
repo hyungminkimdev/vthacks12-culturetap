@@ -20,7 +20,6 @@ extension ShapeStyle where Self == Color {
     }
     
     static var keyColor: Self { Self(hex: 0xB1EFCD) }
-    
     static var background: Self { Self(hex: 0x25242B) }
     
 
