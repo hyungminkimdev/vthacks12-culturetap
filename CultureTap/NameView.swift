@@ -23,13 +23,13 @@ struct NameView: View {
         ]        
         VStack {
             HStack {
-                Text(labels[currentStep])
+                Text("Name")
                     .foregroundStyle(Color.white)
                 Spacer()
             }
             .padding(.horizontal)
             
-            TextField(placeholders[currentStep], text: $textInput)
+            TextField("Enter your name", text: $textInput)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
                 .padding(.horizontal)
                 .textInputAutocapitalization(.never)
