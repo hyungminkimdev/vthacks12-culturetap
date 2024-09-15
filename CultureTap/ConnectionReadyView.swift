@@ -2,7 +2,7 @@ import SwiftUI
 
 struct ConnectionReadyView: View {
     @StateObject var connectDevicesSession = ConnectDevicesSession()
-    
+
     var body: some View {
         Group {
             if connectDevicesSession.userProfile == nil {
@@ -58,6 +58,7 @@ struct WaitingView: View {
             .navigationTitle("") // You can set a title if needed or leave it empty
         }
         .navigationViewStyle(StackNavigationViewStyle()) // Ensures consistent behavior across devices
+        .navigationBarBackButtonHidden()
     }
 }
 

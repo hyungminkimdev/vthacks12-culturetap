@@ -50,7 +50,7 @@ struct ContentView: View {
                 .padding(.horizontal)
                 
                 Text("OR")
-                    .font(.title3)
+                    .font(.headline)
                     .foregroundStyle(Color.white)
                     .padding(.top, 10)
                 
@@ -73,7 +73,7 @@ struct ContentView: View {
     }
 }
 
-//#Preview {
-//    ContentView()
-//}
+#Preview {
+    ContentView()
+}
 

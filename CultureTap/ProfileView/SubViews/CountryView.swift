@@ -10,11 +10,11 @@ import SwiftUI
 
 struct CountryView: View {
     @ObservedObject var userProfile: UserProfile
-    @State private var selectedCountry = "United States"
+    @State private var selectedCountry = "Germany 🇩🇪"
     
     let countries = [
-        "United States 🇺🇸", "Canada 🇨🇦", "South Korea 🇰🇷", "Germany 🇩🇪", "France 🇫🇷", "Japan 🇯🇵",
-        "Australia 🇦🇺", "Brazil 🇧🇷", "China 🇨🇳", "India 🇮🇳", "Italy 🇮🇹", "Mexico 🇲🇽", "Netherlands 🇳🇱",
+        "United States 🇺🇸", "Canada 🇨🇦", "Germany 🇩🇪", "France 🇫🇷", "Netherlands 🇳🇱",
+        "Japan 🇯🇵", "Australia 🇦🇺", "Brazil 🇧🇷", "China 🇨🇳", "India 🇮🇳", "Italy 🇮🇹", "Mexico 🇲🇽", "South Korea 🇰🇷",
         "New Zealand 🇳🇿", "Russia 🇷🇺", "South Africa 🇿🇦", "Spain 🇪🇸", "Sweden 🇸🇪", "Switzerland 🇨🇭",
         "Turkey 🇹🇷", "United Kingdom 🇬🇧"
         // Add more countries as needed
@@ -37,8 +37,7 @@ struct CountryView: View {
                 }
             }
             .frame(maxWidth: .infinity)
-            .background(Color.black)
-            .pickerStyle(MenuPickerStyle())
+            .pickerStyle(.inline)
             .padding()
             .onChange(of: selectedCountry) { newValue in
                 userProfile.country = newValue
@@ -49,12 +48,8 @@ struct CountryView: View {
     }
 }
 
-//#Preview {
-//    CountryView()
-//}
-
-
-//#Preview {
-//    let sampleProfile = UserProfile(name: "Hyungmin", age: 28, country: "Korea", hobbies: ["Reading"], mbti: "ESFJ", funFacts: "Likes coding")
-//    HobbiesView(userprofile: sampleProfile)
-//}
+struct CountryView_Previews: PreviewProvider {
+    static var previews: some View {
+        ProfileView(userProfile: UserProfile(name: "Hyungmin", age: 28, country: "Korea", hobbies: "Reading", mbti: "ESFJ", funFacts: "Likes coding"))
+    }
+}

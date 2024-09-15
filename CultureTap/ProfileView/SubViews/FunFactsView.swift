@@ -33,6 +33,8 @@ struct FunFactsView: View {
 }
 
 
-//#Preview {
-//    FunFactsView()
-//}
+struct FunFacts_Previews: PreviewProvider {
+    static var previews: some View {
+        ProfileView(userProfile: UserProfile(name: "Hyungmin", age: 28, country: "Korea", hobbies: "Reading", mbti: "ESFJ", funFacts: "Likes coding"))
+    }
+}

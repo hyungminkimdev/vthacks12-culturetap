@@ -6,19 +6,19 @@ struct ProfileView: View {
     
     // This state will control the navigation
     @State private var navigateToConnectionReady = false
+    @Environment(\.presentationMode) var presentationMode
 
     var body: some View {
         NavigationView {
             VStack {
+                
                 Spacer()
+                    .frame(height: 180)
                 
                 Image("Logo")
                     .resizable()
                     .frame(width: 320, height: 100)
                     .padding()
-                
-                Spacer()
-                    .frame(height: 60)
                 
                 switch currentStep {
                 case 0:
@@ -30,7 +30,7 @@ struct ProfileView: View {
                 case 3:
                     HobbiesView(userProfile: userProfile)
                 case 4:
-                    MBTIView(userProfile: userProfile)
+                    MbtiView(userProfile: userProfile)
                 case 5:
                     FunFactsView(userProfile: userProfile)
                 default:
@@ -72,12 +72,25 @@ struct ProfileView: View {
                     .ignoresSafeArea()
             }
         }
+        .navigationBarItems(leading: Button(action: {
+            if currentStep >= 1 {
+                currentStep -= 1
+            } else {
+                presentationMode.wrappedValue.dismiss()
+            }
+        }) {
+            HStack {
+                Text("<")
+                    .font(.title2)
+                    .foregroundStyle(Color.white)
+            }
+        })
+        .navigationBarBackButtonHidden()
     }
 }
 
-// Preview
-//struct ProfileView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        ProfileView(userprofile: UserProfile(name: "Hyungmin", age: 28, country: "Korea", hobbies: ["Reading"], mbti: "ESFJ", funFacts: "Likes coding"))
-//    }
-//}
+struct ProfileView_Previews: PreviewProvider {
+    static var previews: some View {
+        ProfileView(userProfile: UserProfile(name: "Hyungmin", age: 28, country: "Korea", hobbies: "Reading", mbti: "ESFJ", funFacts: "Likes coding"))
+    }
+}
