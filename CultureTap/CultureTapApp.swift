@@ -11,7 +11,7 @@ import SwiftUI
 struct CultureTapApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ConfirmView()
         }
     }
 }

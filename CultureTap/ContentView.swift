@@ -12,7 +12,7 @@ struct ContentView: View {
     var body: some View {
             VStack {
                 Text("hi")
-                    .foregroundStyle(Color.primary)
+                    .foregroundStyle(Color.keyColor)
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .background {

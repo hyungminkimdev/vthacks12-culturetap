@@ -19,7 +19,9 @@ extension ShapeStyle where Self == Color {
         self.init(red: red, green: green, blue: blue, opacity: alpha)
     }
     
+    static var keyColor: Self { Self(hex: 0xB1EFCD) }
+    
     static var background: Self { Self(hex: 0x25242B) }
-    static var primary: Self { Self(hex: 0xB1EFCD) }
+    
 
 }

@@ -13,7 +13,7 @@ struct ConfirmView: View {
     var body: some View {
         VStack(alignment: .leading) {
             Text("Connected Devices:")
-            Text(String(describing: colorSession.connectedPeers.map(\.displayName)))
+            Text(String(describing: colorSession.session.connectedPeers.map(\.displayName)))
             
             Divider()
             
@@ -26,6 +26,9 @@ struct ConfirmView: View {
                 }
             }
             Spacer()
+        }
+        .onAppear {
+            print("device name : \(UIDevice.current.name)")
         }
         .padding()
         .background((colorSession.currentColor.map(\.color) ?? .clear).ignoresSafeArea())

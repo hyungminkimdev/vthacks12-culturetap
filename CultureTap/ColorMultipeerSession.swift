@@ -18,11 +18,11 @@ class ColorMultipeerSession: NSObject, ObservableObject {
     //(최대 15자 길이의 고유한 문자열이어야 하며 ASCII 소문자, 숫자 및 하이픈만 포함할 수 있습니다).
     @Published var currentColor: NamedColor? = nil
     
-    private let serviceType = "example-color"
+    private let serviceType = "data-transfer"
     private let myPeerId = MCPeerID(displayName: UIDevice.current.name)
     private let serviceAdvertiser: MCNearbyServiceAdvertiser
     private let serviceBrowser: MCNearbyServiceBrowser
-    private let session: MCSession
+    public let session: MCSession
     private let log = Logger()
     
     override init() {
@@ -50,11 +50,18 @@ class ColorMultipeerSession: NSObject, ObservableObject {
         self.currentColor = color
 
         if !session.connectedPeers.isEmpty {
+//        if !connectedPeers.isEmpty {
             do {
                 try session.send(color.rawValue.data(using: .utf8)!, toPeers: session.connectedPeers, with: .reliable)
+//                try session.send(color.rawValue.data(using: .utf8)!, toPeers: connectedPeers, with: .reliable)
+
             } catch {
                 log.error("Error for sending: \(String(describing: error))")
             }
+        }
+        else {
+            print("Session not found")
+            print("Session: \(session)")
         }
     }
     
@@ -68,6 +75,7 @@ extension ColorMultipeerSession: MCNearbyServiceAdvertiserDelegate {
     }
     
     func advertiser(_ advertiser: MCNearbyServiceAdvertiser, didReceiveInvitationFromPeer peerID: MCPeerID, withContext context: Data?, invitationHandler: @escaping (Bool, MCSession?) -> Void) {
+        invitationHandler(true, session)
         log.info("didReceiveInvitationFromPeer \(peerID)")
     }
 }
@@ -78,6 +86,9 @@ extension ColorMultipeerSession: MCNearbyServiceBrowserDelegate {
     }
     
     func browser(_ browser: MCNearbyServiceBrowser, foundPeer peerID: MCPeerID, withDiscoveryInfo info: [String: String]?) {
+        connectedPeers.append(peerID)
+        print("(Session.connected @@@@@ \(session.connectedPeers)")
+        serviceBrowser.invitePeer(peerID, to: session, withContext: nil, timeout: 10)
         log.info("ServiceBrowser found peer: \(peerID)")
     }
     
