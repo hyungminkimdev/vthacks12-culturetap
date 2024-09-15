@@ -9,31 +9,40 @@ import SwiftUI
 
 struct AgeView: View {
     @ObservedObject var userProfile: UserProfile
-    @State var textInput: String = ""
-
+    @State private var selectedAge = "18"
+    
     var body: some View {
+        let ages: [String] = {
+                return (1...120).map { String($0) }
+            }()
         VStack {
             HStack {
-                Text("Age")
+                Text("Select your Age")
                     .foregroundStyle(Color.white)
                 Spacer()
             }
             .padding(.horizontal)
             
-            TextField("Enter your age", text: $textInput)
-                .textFieldStyle(RoundedBorderTextFieldStyle())
-                .padding(.horizontal)
-                .textInputAutocapitalization(.never)
-                .onChange(of: textInput) { newValue in
-                                    if let age = Int(newValue) {
-                                        userProfile.age = age
-                                    }
-                                }
+            Picker("Age", selection: $selectedAge) {
+                ForEach(ages, id: \.self) { age in
+                    Text(age)
+                        .tag(age)
+                        .foregroundStyle(Color.white)
+                }
+            }
+            .frame(maxWidth: .infinity)
+            .pickerStyle(.inline)
+            .padding()
+            .onChange(of: selectedAge) { newValue in
+                userProfile.country = newValue
+            }
         }
         .background(Color.background)
     }
 }
 
-//#Preview {
-//    AgeView()
-//}
+struct AgeView_Previews: PreviewProvider {
+    static var previews: some View {
+        ProfileView(userProfile: UserProfile(name: "Hyungmin", age: 28, country: "Korea", hobbies: "Reading", mbti: "ESFJ", funFacts: "Likes coding"))
+    }
+}

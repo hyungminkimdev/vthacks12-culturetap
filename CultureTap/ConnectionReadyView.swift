@@ -2,7 +2,7 @@ import SwiftUI
 
 struct ConnectionReadyView: View {
     @StateObject var connectDevicesSession = ConnectDevicesSession()
-    
+
     var body: some View {
         Group {
             if connectDevicesSession.userProfile == nil {
@@ -15,33 +15,36 @@ struct ConnectionReadyView: View {
 
 struct WaitingView: View {
     var body: some View {
-        ZStack {
-            Color.black.edgesIgnoringSafeArea(.all)
-            
-            VStack(spacing: 20) {
-                ZStack {
-                    Circle()
-                        .fill(Color.mint)
-                        .frame(width: 80, height: 80)
+        NavigationView {
+            ZStack {
+                Color.black.edgesIgnoringSafeArea(.all)
+                
+                VStack(spacing: 20) {
+                    ZStack {
+                        Circle()
+                            .fill(Color.mint)
+                            .frame(width: 80, height: 80)
+                        
+                        Image(systemName: "checkmark")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 40, height: 40)
+                            .foregroundColor(.white)
+                    }
                     
-                    Image(systemName: "checkmark")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 40, height: 40)
+                    Text("Ready to go !")
+                        .font(.title2)
+                        .fontWeight(.semibold)
                         .foregroundColor(.white)
+                    
+                    Text("We have received your profile. Tap\nwith another phone to connect\nwith them")
+                        .multilineTextAlignment(.center)
+                        .foregroundColor(.gray)
+                        .font(.body)
                 }
-                
-                Text("Ready to go !")
-                    .font(.title2)
-                    .fontWeight(.semibold)
-                    .foregroundColor(.white)
-                
-                Text("We have received your profile. Tap\nwith another phone to connect\nwith them")
-                    .multilineTextAlignment(.center)
-                    .foregroundColor(.gray)
-                    .font(.body)
             }
         }
+        .navigationBarBackButtonHidden()
     }
 }
 

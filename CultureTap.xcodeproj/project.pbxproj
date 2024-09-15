@@ -19,7 +19,7 @@
 		BAB734272C9680CC0047DE51 /* AgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB734262C9680CC0047DE51 /* AgeView.swift */; };
 		BAB734292C9680D40047DE51 /* CountryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB734282C9680D30047DE51 /* CountryView.swift */; };
 		BAB7342B2C9680DC0047DE51 /* HobbiesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB7342A2C9680DC0047DE51 /* HobbiesView.swift */; };
-		BAB7342D2C9680EB0047DE51 /* MBTIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB7342C2C9680EB0047DE51 /* MBTIView.swift */; };
+		BAB7342D2C9680EB0047DE51 /* MbtiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB7342C2C9680EB0047DE51 /* MbtiView.swift */; };
 		BAB7342F2C9680F80047DE51 /* FunFactsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB7342E2C9680F80047DE51 /* FunFactsView.swift */; };
 		BAB734332C969B430047DE51 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB734322C969B430047DE51 /* UserProfile.swift */; };
 		BAB734372C96ACBB0047DE51 /* QuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB734362C96ACBB0047DE51 /* QuizView.swift */; };
@@ -63,7 +63,7 @@
 		BAB734262C9680CC0047DE51 /* AgeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgeView.swift; sourceTree = "<group>"; };
 		BAB734282C9680D30047DE51 /* CountryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryView.swift; sourceTree = "<group>"; };
 		BAB7342A2C9680DC0047DE51 /* HobbiesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HobbiesView.swift; sourceTree = "<group>"; };
-		BAB7342C2C9680EB0047DE51 /* MBTIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBTIView.swift; sourceTree = "<group>"; };
+		BAB7342C2C9680EB0047DE51 /* MbtiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MbtiView.swift; sourceTree = "<group>"; };
 		BAB7342E2C9680F80047DE51 /* FunFactsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunFactsView.swift; sourceTree = "<group>"; };
 		BAB734322C969B430047DE51 /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
 		BAB734362C96ACBB0047DE51 /* QuizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizView.swift; sourceTree = "<group>"; };
@@ -120,7 +120,7 @@
 				BAB734262C9680CC0047DE51 /* AgeView.swift */,
 				BAB734282C9680D30047DE51 /* CountryView.swift */,
 				BAB7342A2C9680DC0047DE51 /* HobbiesView.swift */,
-				BAB7342C2C9680EB0047DE51 /* MBTIView.swift */,
+				BAB7342C2C9680EB0047DE51 /* MbtiView.swift */,
 				BAB7342E2C9680F80047DE51 /* FunFactsView.swift */,
 			);
 			path = SubViews;
@@ -328,12 +328,11 @@
 				621FBC4A2C96C9890060EF23 /* PeerDataView.swift in Sources */,
 				BAB734332C969B430047DE51 /* UserProfile.swift in Sources */,
 				BAB734252C9680C70047DE51 /* NameView.swift in Sources */,
-				BAB7342D2C9680EB0047DE51 /* MBTIView.swift in Sources */,
+				BAB7342D2C9680EB0047DE51 /* MbtiView.swift in Sources */,
 				BABB7A7B2C962220006EF040 /* ContentView.swift in Sources */,
 				621FBC442C967DF30060EF23 /* ConnectionReadyView.swift in Sources */,
 				BAB734272C9680CC0047DE51 /* AgeView.swift in Sources */,
 				BA1CBC032C96413A0043CDED /* ColorExtension.swift in Sources */,
-				BAB7343A2C96BB2D0047DE51 /* ConfirmView.swift in Sources */,
 				BA1CBBEA2C96290F0043CDED /* ProfileView.swift in Sources */,
 				BAB7342F2C9680F80047DE51 /* FunFactsView.swift in Sources */,
 				BABB7A792C962220006EF040 /* CultureTapApp.swift in Sources */,
