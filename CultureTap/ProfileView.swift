@@ -8,19 +8,8 @@
 import SwiftUI
 
 struct ProfileView: View {
-    @State private var textInput: String = ""
-    @State private var currentStep: Int = 0
+    @State var currentStep: Int = 0
     
-    let labels = ["Name", "Age", "Country", "Hobbies", "MBTI", "Fun Fact"]
-    let placeholders = [
-        "Enter your name",
-        "Enter your age",
-        "Enter your country",
-        "Enter your hobbies",
-        "Enter your MBTI",
-        "Enter a fun fact about you"
-    ]
-
     var body: some View {
         VStack {
             Spacer()
@@ -33,26 +22,29 @@ struct ProfileView: View {
             Spacer()
                 .frame(height: 60)
             
-            HStack {
-                Text(labels[currentStep])
-                    .foregroundStyle(Color.white)
-                Spacer()
+            Group {
+                switch currentStep {
+                case 0:
+                    NameView()
+                case 1:
+                    AgeView()
+                case 2:
+                    CountryView()
+                case 3:
+                    HobbiesView()
+                case 4:
+                    MBTIView()
+                case 5:
+                    FunFactsView()
+                default:
+                    EmptyView()
+                }
             }
-            .padding(.horizontal)
-            
-            TextField(placeholders[currentStep], text: $textInput)
-                .textFieldStyle(RoundedBorderTextFieldStyle())
-                .padding(.horizontal)
-                .textInputAutocapitalization(.never)
             
             Spacer()
-                .frame(height: 20)
             
             Button(action: {
-                if currentStep < labels.count - 1 {
-                    currentStep += 1
-                    textInput = ""  // Clear the text field for the next input
-                }
+                currentStep += 1
             }){
                 Text("Next")
                     .font(.headline)
@@ -63,7 +55,6 @@ struct ProfileView: View {
                     .cornerRadius(10)
             }
             .padding()
-            Spacer()
         }
         .padding()
         .frame(maxWidth: .infinity, maxHeight: .infinity)

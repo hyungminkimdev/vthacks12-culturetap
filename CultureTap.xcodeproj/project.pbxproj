@@ -13,6 +13,12 @@
 		BA1CBBEC2C962B1E0043CDED /* ConfirmView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1CBBEB2C962B1E0043CDED /* ConfirmView.swift */; };
 		BA1CBBEF2C962E900043CDED /* ColorMultipeerSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1CBBEE2C962E900043CDED /* ColorMultipeerSession.swift */; };
 		BA1CBC032C96413A0043CDED /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1CBC022C96413A0043CDED /* ColorExtension.swift */; };
+		BAB734252C9680C70047DE51 /* NameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB734242C9680C70047DE51 /* NameView.swift */; };
+		BAB734272C9680CC0047DE51 /* AgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB734262C9680CC0047DE51 /* AgeView.swift */; };
+		BAB734292C9680D40047DE51 /* CountryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB734282C9680D30047DE51 /* CountryView.swift */; };
+		BAB7342B2C9680DC0047DE51 /* HobbiesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB7342A2C9680DC0047DE51 /* HobbiesView.swift */; };
+		BAB7342D2C9680EB0047DE51 /* MBTIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB7342C2C9680EB0047DE51 /* MBTIView.swift */; };
+		BAB7342F2C9680F80047DE51 /* FunFactsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB7342E2C9680F80047DE51 /* FunFactsView.swift */; };
 		BABB7A792C962220006EF040 /* CultureTapApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABB7A782C962220006EF040 /* CultureTapApp.swift */; };
 		BABB7A7B2C962220006EF040 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABB7A7A2C962220006EF040 /* ContentView.swift */; };
 		BABB7A7D2C962222006EF040 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BABB7A7C2C962222006EF040 /* Assets.xcassets */; };
@@ -47,6 +53,12 @@
 		BA1CBBED2C962CFD0043CDED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		BA1CBBEE2C962E900043CDED /* ColorMultipeerSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorMultipeerSession.swift; sourceTree = "<group>"; };
 		BA1CBC022C96413A0043CDED /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
+		BAB734242C9680C70047DE51 /* NameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameView.swift; sourceTree = "<group>"; };
+		BAB734262C9680CC0047DE51 /* AgeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgeView.swift; sourceTree = "<group>"; };
+		BAB734282C9680D30047DE51 /* CountryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryView.swift; sourceTree = "<group>"; };
+		BAB7342A2C9680DC0047DE51 /* HobbiesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HobbiesView.swift; sourceTree = "<group>"; };
+		BAB7342C2C9680EB0047DE51 /* MBTIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBTIView.swift; sourceTree = "<group>"; };
+		BAB7342E2C9680F80047DE51 /* FunFactsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunFactsView.swift; sourceTree = "<group>"; };
 		BABB7A752C962220006EF040 /* CultureTap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CultureTap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BABB7A782C962220006EF040 /* CultureTapApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CultureTapApp.swift; sourceTree = "<group>"; };
 		BABB7A7A2C962220006EF040 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -113,6 +125,12 @@
 				BA1CBBEB2C962B1E0043CDED /* ConfirmView.swift */,
 				BA1CBBEE2C962E900043CDED /* ColorMultipeerSession.swift */,
 				BA1CBBE92C96290F0043CDED /* ProfileView.swift */,
+				BAB734242C9680C70047DE51 /* NameView.swift */,
+				BAB7342E2C9680F80047DE51 /* FunFactsView.swift */,
+				BAB734262C9680CC0047DE51 /* AgeView.swift */,
+				BAB734282C9680D30047DE51 /* CountryView.swift */,
+				BAB7342A2C9680DC0047DE51 /* HobbiesView.swift */,
+				BAB7342C2C9680EB0047DE51 /* MBTIView.swift */,
 				BABB7A7C2C962222006EF040 /* Assets.xcassets */,
 				BABB7A7E2C962222006EF040 /* Preview Content */,
 				BA1CBC022C96413A0043CDED /* ColorExtension.swift */,
@@ -279,12 +297,18 @@
 			files = (
 				621FBC422C967D2C0060EF23 /* ConnectDevicesSession.swift in Sources */,
 				BA1CBBEF2C962E900043CDED /* ColorMultipeerSession.swift in Sources */,
+				BAB734252C9680C70047DE51 /* NameView.swift in Sources */,
+				BAB7342D2C9680EB0047DE51 /* MBTIView.swift in Sources */,
 				BABB7A7B2C962220006EF040 /* ContentView.swift in Sources */,
 				BA1CBBEC2C962B1E0043CDED /* ConfirmView.swift in Sources */,
 				621FBC442C967DF30060EF23 /* ConnectionReadyView.swift in Sources */,
+				BAB734272C9680CC0047DE51 /* AgeView.swift in Sources */,
 				BA1CBC032C96413A0043CDED /* ColorExtension.swift in Sources */,
 				BA1CBBEA2C96290F0043CDED /* ProfileView.swift in Sources */,
+				BAB7342F2C9680F80047DE51 /* FunFactsView.swift in Sources */,
 				BABB7A792C962220006EF040 /* CultureTapApp.swift in Sources */,
+				BAB734292C9680D40047DE51 /* CountryView.swift in Sources */,
+				BAB7342B2C9680DC0047DE51 /* HobbiesView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
