@@ -10,8 +10,6 @@
 		621FBC422C967D2C0060EF23 /* ConnectDevicesSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 621FBC412C967D2C0060EF23 /* ConnectDevicesSession.swift */; };
 		621FBC442C967DF30060EF23 /* ConnectionReadyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 621FBC432C967DF30060EF23 /* ConnectionReadyView.swift */; };
 		BA1CBBEA2C96290F0043CDED /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1CBBE92C96290F0043CDED /* ProfileView.swift */; };
-		BA1CBBEC2C962B1E0043CDED /* ConfirmView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1CBBEB2C962B1E0043CDED /* ConfirmView.swift */; };
-		BA1CBBEF2C962E900043CDED /* ColorMultipeerSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1CBBEE2C962E900043CDED /* ColorMultipeerSession.swift */; };
 		BA1CBC032C96413A0043CDED /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1CBC022C96413A0043CDED /* ColorExtension.swift */; };
 		BAB734252C9680C70047DE51 /* NameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB734242C9680C70047DE51 /* NameView.swift */; };
 		BAB734272C9680CC0047DE51 /* AgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB734262C9680CC0047DE51 /* AgeView.swift */; };
@@ -21,6 +19,8 @@
 		BAB7342F2C9680F80047DE51 /* FunFactsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB7342E2C9680F80047DE51 /* FunFactsView.swift */; };
 		BAB734332C969B430047DE51 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB734322C969B430047DE51 /* UserProfile.swift */; };
 		BAB734372C96ACBB0047DE51 /* QuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB734362C96ACBB0047DE51 /* QuizView.swift */; };
+		BAB734382C96AE620047DE51 /* ConfirmView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1CBBEB2C962B1E0043CDED /* ConfirmView.swift */; };
+		BAB734392C96AE740047DE51 /* ColorMultipeerSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1CBBEE2C962E900043CDED /* ColorMultipeerSession.swift */; };
 		BABB7A792C962220006EF040 /* CultureTapApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABB7A782C962220006EF040 /* CultureTapApp.swift */; };
 		BABB7A7B2C962220006EF040 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABB7A7A2C962220006EF040 /* ContentView.swift */; };
 		BABB7A7D2C962222006EF040 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BABB7A7C2C962222006EF040 /* Assets.xcassets */; };
@@ -128,6 +128,8 @@
 				BABB7A772C962220006EF040 /* CultureTap */,
 				BABB7A882C962222006EF040 /* CultureTapTests */,
 				BABB7A922C962222006EF040 /* CultureTapUITests */,
+				BA1CBBEB2C962B1E0043CDED /* ConfirmView.swift */,
+				BA1CBBEE2C962E900043CDED /* ColorMultipeerSession.swift */,
 				BABB7A762C962220006EF040 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -146,18 +148,16 @@
 			isa = PBXGroup;
 			children = (
 				BA1CBBED2C962CFD0043CDED /* Info.plist */,
-				BABB7A782C962220006EF040 /* CultureTapApp.swift */,
 				BABB7A7A2C962220006EF040 /* ContentView.swift */,
-				BA1CBBEB2C962B1E0043CDED /* ConfirmView.swift */,
-				BA1CBBEE2C962E900043CDED /* ColorMultipeerSession.swift */,
 				BAB734342C96A3CE0047DE51 /* ProfileView */,
+				621FBC432C967DF30060EF23 /* ConnectionReadyView.swift */,
+				BAB734362C96ACBB0047DE51 /* QuizView.swift */,
 				BABB7A7C2C962222006EF040 /* Assets.xcassets */,
 				BABB7A7E2C962222006EF040 /* Preview Content */,
 				BA1CBC022C96413A0043CDED /* ColorExtension.swift */,
 				621FBC412C967D2C0060EF23 /* ConnectDevicesSession.swift */,
 				BAB734322C969B430047DE51 /* UserProfile.swift */,
-				621FBC432C967DF30060EF23 /* ConnectionReadyView.swift */,
-				BAB734362C96ACBB0047DE51 /* QuizView.swift */,
+				BABB7A782C962220006EF040 /* CultureTapApp.swift */,
 			);
 			path = CultureTap;
 			sourceTree = "<group>";
@@ -318,12 +318,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				621FBC422C967D2C0060EF23 /* ConnectDevicesSession.swift in Sources */,
-				BA1CBBEF2C962E900043CDED /* ColorMultipeerSession.swift in Sources */,
 				BAB734332C969B430047DE51 /* UserProfile.swift in Sources */,
 				BAB734252C9680C70047DE51 /* NameView.swift in Sources */,
 				BAB7342D2C9680EB0047DE51 /* MBTIView.swift in Sources */,
 				BABB7A7B2C962220006EF040 /* ContentView.swift in Sources */,
-				BA1CBBEC2C962B1E0043CDED /* ConfirmView.swift in Sources */,
 				621FBC442C967DF30060EF23 /* ConnectionReadyView.swift in Sources */,
 				BAB734272C9680CC0047DE51 /* AgeView.swift in Sources */,
 				BA1CBC032C96413A0043CDED /* ColorExtension.swift in Sources */,
@@ -348,8 +346,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BAB734392C96AE740047DE51 /* ColorMultipeerSession.swift in Sources */,
 				BABB7A942C962222006EF040 /* CultureTapUITests.swift in Sources */,
 				BABB7A962C962222006EF040 /* CultureTapUITestsLaunchTests.swift in Sources */,
+				BAB734382C96AE620047DE51 /* ConfirmView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
