@@ -7,26 +7,24 @@
 
 import SwiftUI
 
+
 struct CountryView: View {
     @ObservedObject var userprofile: UserProfile
-    let countries = ["United States", "Canada", "South Korea", "Germany", "France", "Japan"]
+    @State private var selectedCountry = "United States"
+
+    let countries = [
+        "United States", "Canada", "South Korea", "Germany", "France", "Japan",
+        "Australia", "Brazil", "China", "India", "Italy", "Mexico", "Netherlands",
+        "New Zealand", "Russia", "South Africa", "Spain", "Sweden", "Switzerland",
+        "Turkey", "United Kingdom"
+        // Add more countries as needed
+    ]
+
     var body: some View {
-        let currentStep: Int = 2
-        @State var selectedCountry = "United States"
-        
-        let labels = ["Name", "Age", "Country", "Hobbies", "MBTI", "Fun Fact"]
-        let placeholders = [
-            "Enter your name",
-            "Enter your age",
-            "Enter your country",
-            "Enter your hobbies",
-            "Enter your MBTI",
-            "Enter a fun fact about you"
-        ]
         VStack {
             HStack {
                 Text("Select your Country")
-                    .foregroundStyle(Color.white)
+                    .foregroundColor(.white)
                 Spacer()
             }
             .padding(.horizontal)
@@ -38,12 +36,24 @@ struct CountryView: View {
             }
             .pickerStyle(MenuPickerStyle())
             .padding()
+            .onChange(of: selectedCountry) { newValue in
+                userprofile.country = newValue
+            }
             
+            Text("Selected Country: \(selectedCountry)")
+                .foregroundColor(.white)
+                .padding()
         }
-        .background(Color.background)
+        .background(Color.black) // Dark background color
     }
 }
 
 //#Preview {
 //    CountryView()
+//}
+
+
+//#Preview {
+//    let sampleProfile = UserProfile(name: "Hyungmin", age: 28, country: "Korea", hobbies: ["Reading"], mbti: "ESFJ", funFacts: "Likes coding")
+//    HobbiesView(userprofile: sampleProfile)
 //}
