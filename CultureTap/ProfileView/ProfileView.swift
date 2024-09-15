@@ -1,29 +1,25 @@
-//
-//  ProfileView.swift
-//  CultureTap
-//
-//  Created by Henry's Mac on 9/14/24.
-//
-
 import SwiftUI
 
 struct ProfileView: View {
     @State var currentStep: Int = 0
     @ObservedObject var userprofile: UserProfile
     
+    // This state will control the navigation
+    @State private var navigateToConnectionReady = false
+
     var body: some View {
-        VStack {
-            Spacer()
-            
-            Image("Logo")
-                .resizable()
-                .frame(width: 320, height: 100)
-                .padding()
-            
-            Spacer()
-                .frame(height: 60)
-            
-            
+        NavigationView {
+            VStack {
+                Spacer()
+                
+                Image("Logo")
+                    .resizable()
+                    .frame(width: 320, height: 100)
+                    .padding()
+                
+                Spacer()
+                    .frame(height: 60)
+                
                 switch currentStep {
                 case 0:
                     NameView(userprofile: userprofile)
@@ -40,33 +36,48 @@ struct ProfileView: View {
                 default:
                     EmptyView()
                 }
-            
-            
-            Spacer()
-            
-            Button(action: {
-                currentStep += 1
-                print("Name: \(userprofile.name), Age: \(userprofile.age), City: \(userprofile.country), Hobbies: \(userprofile.hobbies), FunFacts: \(userprofile.funFacts), MBTI: \(userprofile.mbti)")
-            }){
-                Text("Next")
-                    .font(.headline)
-                    .frame(maxWidth: .infinity)
-                    .padding()
-                    .background(Color.keyColor)
-                    .foregroundColor(.white)
-                    .cornerRadius(10)
+                
+                Spacer()
+                
+                Button(action: {
+                    if currentStep < 5 {
+                        currentStep += 1
+                    } else {
+                        // Navigate to ConnectionReadyView when on the last step
+                        navigateToConnectionReady = true
+                    }
+                    print("Name: \(userprofile.name), Age: \(userprofile.age), City: \(userprofile.country), Hobbies: \(userprofile.hobbies), FunFacts: \(userprofile.funFacts), MBTI: \(userprofile.mbti)")
+                }) {
+                    Text("Next")
+                        .font(.headline)
+                        .frame(maxWidth: .infinity)
+                        .padding()
+                        .background(Color.keyColor)
+                        .foregroundColor(.white)
+                        .cornerRadius(10)
+                }
+                .padding()
+                
+                // NavigationLink for transitioning to ConnectionReadyView
+                NavigationLink(
+                    destination: ConnectionReadyView(),
+                    isActive: $navigateToConnectionReady,
+                    label: { EmptyView() }
+                )
             }
             .padding()
-        }
-        .padding()
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background {
-            Color.background
-                .ignoresSafeArea()
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .background {
+                Color.background
+                    .ignoresSafeArea()
+            }
         }
     }
 }
 
-//#Preview {
-//    ProfileView(userprofile: .constant(UserProfile(name: "Hyungmin", age: 28, city: "Seoul")))
+// Preview
+//struct ProfileView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ProfileView(userprofile: UserProfile(name: "Hyungmin", age: 28, country: "Korea", hobbies: ["Reading"], mbti: "ESFJ", funFacts: "Likes coding"))
+//    }
 //}
