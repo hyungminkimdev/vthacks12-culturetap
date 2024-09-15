@@ -98,6 +98,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BAB734342C96A3CE0047DE51 /* ProfileView */ = {
+			isa = PBXGroup;
+			children = (
+				BAB734352C96A4020047DE51 /* SubViews */,
+				BA1CBBE92C96290F0043CDED /* ProfileView.swift */,
+			);
+			path = ProfileView;
+			sourceTree = "<group>";
+		};
+		BAB734352C96A4020047DE51 /* SubViews */ = {
+			isa = PBXGroup;
+			children = (
+				BAB734242C9680C70047DE51 /* NameView.swift */,
+				BAB734262C9680CC0047DE51 /* AgeView.swift */,
+				BAB734282C9680D30047DE51 /* CountryView.swift */,
+				BAB7342A2C9680DC0047DE51 /* HobbiesView.swift */,
+				BAB7342C2C9680EB0047DE51 /* MBTIView.swift */,
+				BAB7342E2C9680F80047DE51 /* FunFactsView.swift */,
+			);
+			path = SubViews;
+			sourceTree = "<group>";
+		};
 		BABB7A6C2C962220006EF040 = {
 			isa = PBXGroup;
 			children = (
@@ -126,13 +148,7 @@
 				BABB7A7A2C962220006EF040 /* ContentView.swift */,
 				BA1CBBEB2C962B1E0043CDED /* ConfirmView.swift */,
 				BA1CBBEE2C962E900043CDED /* ColorMultipeerSession.swift */,
-				BA1CBBE92C96290F0043CDED /* ProfileView.swift */,
-				BAB734242C9680C70047DE51 /* NameView.swift */,
-				BAB734262C9680CC0047DE51 /* AgeView.swift */,
-				BAB7342E2C9680F80047DE51 /* FunFactsView.swift */,
-				BAB734282C9680D30047DE51 /* CountryView.swift */,
-				BAB7342A2C9680DC0047DE51 /* HobbiesView.swift */,
-				BAB7342C2C9680EB0047DE51 /* MBTIView.swift */,
+				BAB734342C96A3CE0047DE51 /* ProfileView */,
 				BABB7A7C2C962222006EF040 /* Assets.xcassets */,
 				BABB7A7E2C962222006EF040 /* Preview Content */,
 				BA1CBC022C96413A0043CDED /* ColorExtension.swift */,
