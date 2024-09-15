@@ -10,7 +10,8 @@ import SwiftUI
 struct ContentView: View {
     @State private var id: String = ""
     @State private var password: String = ""
-    
+    @StateObject var userprofile = UserProfile(name: "", age: 0, country: "", hobbies: [], mbti: "", funFacts: "")
+
     var body: some View {
         NavigationStack {
             VStack {
@@ -37,7 +38,7 @@ struct ContentView: View {
                 Spacer()
                     .frame(height: 20)
                 
-                NavigationLink(destination: ProfileView()) {
+                NavigationLink(destination: ProfileView(userprofile: userprofile)) {
                     Text("Sign Up")
                         .font(.headline)
                         .frame(maxWidth: .infinity)
@@ -53,7 +54,7 @@ struct ContentView: View {
                     .foregroundStyle(Color.white)
                     .padding(.top, 10)
                 
-                NavigationLink(destination: ProfileView()) {
+                NavigationLink(destination: ProfileView(userprofile: userprofile)) {
                     Image("SignUpApple")
                         .resizable()
                         .frame(width: 350, height: 60)
@@ -72,7 +73,7 @@ struct ContentView: View {
     }
 }
 
-#Preview {
-    ContentView()
-}
+//#Preview {
+//    ContentView()
+//}
 

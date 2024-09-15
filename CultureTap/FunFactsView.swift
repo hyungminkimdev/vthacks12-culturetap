@@ -8,11 +8,16 @@
 import SwiftUI
 
 struct FunFactsView: View {
+    @ObservedObject var userprofile: UserProfile
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Text("userprofile")
+            .onAppear {
+                print("\(userprofile)")
+            }
     }
 }
 
-#Preview {
-    FunFactsView()
-}
+//#Preview {
+//    FunFactsView()
+//}

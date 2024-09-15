@@ -8,19 +8,10 @@
 import SwiftUI
 
 struct AgeView: View {
+    @ObservedObject var userprofile: UserProfile
+    @State var textInput: String = "0"
+
     var body: some View {
-        let currentStep: Int = 1
-        @State var textInput: String = ""
-        
-        let labels = ["Name", "Age", "Country", "Hobbies", "MBTI", "Fun Fact"]
-        let placeholders = [
-            "Enter your name",
-            "Enter your age",
-            "Enter your country",
-            "Enter your hobbies",
-            "Enter your MBTI",
-            "Enter a fun fact about you"
-        ]
         VStack {
             HStack {
                 Text("Age")
@@ -33,11 +24,16 @@ struct AgeView: View {
                 .textFieldStyle(RoundedBorderTextFieldStyle())
                 .padding(.horizontal)
                 .textInputAutocapitalization(.never)
+                .onChange(of: textInput) { newValue in
+                                    if let age = Int(newValue) {
+                                        userprofile.age = age
+                                    }
+                                }
         }
         .background(Color.background)
     }
 }
 
-#Preview {
-    AgeView()
-}
+//#Preview {
+//    AgeView()
+//}

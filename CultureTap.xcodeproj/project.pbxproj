@@ -19,6 +19,7 @@
 		BAB7342B2C9680DC0047DE51 /* HobbiesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB7342A2C9680DC0047DE51 /* HobbiesView.swift */; };
 		BAB7342D2C9680EB0047DE51 /* MBTIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB7342C2C9680EB0047DE51 /* MBTIView.swift */; };
 		BAB7342F2C9680F80047DE51 /* FunFactsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB7342E2C9680F80047DE51 /* FunFactsView.swift */; };
+		BAB734332C969B430047DE51 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB734322C969B430047DE51 /* UserProfile.swift */; };
 		BABB7A792C962220006EF040 /* CultureTapApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABB7A782C962220006EF040 /* CultureTapApp.swift */; };
 		BABB7A7B2C962220006EF040 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABB7A7A2C962220006EF040 /* ContentView.swift */; };
 		BABB7A7D2C962222006EF040 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BABB7A7C2C962222006EF040 /* Assets.xcassets */; };
@@ -59,6 +60,7 @@
 		BAB7342A2C9680DC0047DE51 /* HobbiesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HobbiesView.swift; sourceTree = "<group>"; };
 		BAB7342C2C9680EB0047DE51 /* MBTIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBTIView.swift; sourceTree = "<group>"; };
 		BAB7342E2C9680F80047DE51 /* FunFactsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunFactsView.swift; sourceTree = "<group>"; };
+		BAB734322C969B430047DE51 /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
 		BABB7A752C962220006EF040 /* CultureTap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CultureTap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BABB7A782C962220006EF040 /* CultureTapApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CultureTapApp.swift; sourceTree = "<group>"; };
 		BABB7A7A2C962220006EF040 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -126,8 +128,8 @@
 				BA1CBBEE2C962E900043CDED /* ColorMultipeerSession.swift */,
 				BA1CBBE92C96290F0043CDED /* ProfileView.swift */,
 				BAB734242C9680C70047DE51 /* NameView.swift */,
-				BAB7342E2C9680F80047DE51 /* FunFactsView.swift */,
 				BAB734262C9680CC0047DE51 /* AgeView.swift */,
+				BAB7342E2C9680F80047DE51 /* FunFactsView.swift */,
 				BAB734282C9680D30047DE51 /* CountryView.swift */,
 				BAB7342A2C9680DC0047DE51 /* HobbiesView.swift */,
 				BAB7342C2C9680EB0047DE51 /* MBTIView.swift */,
@@ -135,6 +137,7 @@
 				BABB7A7E2C962222006EF040 /* Preview Content */,
 				BA1CBC022C96413A0043CDED /* ColorExtension.swift */,
 				621FBC412C967D2C0060EF23 /* ConnectDevicesSession.swift */,
+				BAB734322C969B430047DE51 /* UserProfile.swift */,
 				621FBC432C967DF30060EF23 /* ConnectionReadyView.swift */,
 			);
 			path = CultureTap;
@@ -297,6 +300,7 @@
 			files = (
 				621FBC422C967D2C0060EF23 /* ConnectDevicesSession.swift in Sources */,
 				BA1CBBEF2C962E900043CDED /* ColorMultipeerSession.swift in Sources */,
+				BAB734332C969B430047DE51 /* UserProfile.swift in Sources */,
 				BAB734252C9680C70047DE51 /* NameView.swift in Sources */,
 				BAB7342D2C9680EB0047DE51 /* MBTIView.swift in Sources */,
 				BABB7A7B2C962220006EF040 /* ContentView.swift in Sources */,

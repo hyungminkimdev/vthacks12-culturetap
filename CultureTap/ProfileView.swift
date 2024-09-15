@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ProfileView: View {
     @State var currentStep: Int = 0
+    @ObservedObject var userprofile: UserProfile
     
     var body: some View {
         VStack {
@@ -22,29 +23,30 @@ struct ProfileView: View {
             Spacer()
                 .frame(height: 60)
             
-            Group {
+            
                 switch currentStep {
                 case 0:
-                    NameView()
+                    NameView(userprofile: userprofile)
                 case 1:
-                    AgeView()
+                    AgeView(userprofile: userprofile)
                 case 2:
-                    CountryView()
+                    CountryView(userprofile: userprofile)
                 case 3:
-                    HobbiesView()
+                    HobbiesView(userprofile: userprofile)
                 case 4:
-                    MBTIView()
+                    MBTIView(userprofile: userprofile)
                 case 5:
-                    FunFactsView()
+                    FunFactsView(userprofile: userprofile)
                 default:
                     EmptyView()
                 }
-            }
+            
             
             Spacer()
             
             Button(action: {
                 currentStep += 1
+                print("Name: \(userprofile.name), Age: \(userprofile.age), City: \(userprofile.country)")
             }){
                 Text("Next")
                     .font(.headline)
@@ -65,6 +67,6 @@ struct ProfileView: View {
     }
 }
 
-#Preview {
-    ProfileView()
-}
+//#Preview {
+//    ProfileView(userprofile: .constant(UserProfile(name: "Hyungmin", age: 28, city: "Seoul")))
+//}

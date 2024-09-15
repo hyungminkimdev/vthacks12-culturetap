@@ -8,14 +8,12 @@
 import MultipeerConnectivity
 import os
 
-
-
-struct UserProfile: Codable {
-    let name: String
-    let age: Int
-    let city: String
-    // Add any other fields you need
-}
+//struct UserProfile: Codable {
+//    let name: String
+//    let age: Int
+//    let city: String
+//    // Add any other fields you need
+//}
 
 class ConnectDevicesSession: NSObject, ObservableObject {
     
@@ -23,13 +21,13 @@ class ConnectDevicesSession: NSObject, ObservableObject {
     // (It must be a unique string up to 15 characters long and may only contain ASCII lowercase letters, numbers, and hyphens).
 
 
-    @Published var userProfile: UserProfile? = UserProfile(
-        name: "John Doe",
-        age: 25,
-        city: "hd"
-    )
+//    @Published var userProfile: UserProfile? = UserProfile(
+//        name: "John Doe",
+//        age: 25,
+//        city: "hd"
+//    )
 
-//    @Published var userProfile: UserProfile? = nil
+    @Published var userProfile: UserProfile? = nil
     
     private let serviceType = "data-transfer"
     private let myPeerId = MCPeerID(displayName: UIDevice.current.name)

@@ -8,19 +8,10 @@
 import SwiftUI
 
 struct NameView: View {
+    @ObservedObject var userprofile: UserProfile
+    @State var textInput: String = ""
+    
     var body: some View {
-        @State var currentStep: Int = 0
-        @State var textInput: String = ""
-        
-        let labels = ["Name", "Age", "Country", "Hobbies", "MBTI", "Fun Fact"]
-        let placeholders = [
-            "Enter your name",
-            "Enter your age",
-            "Enter your country",
-            "Enter your hobbies",
-            "Enter your MBTI",
-            "Enter a fun fact about you"
-        ]        
         VStack {
             HStack {
                 Text("Name")
@@ -33,11 +24,15 @@ struct NameView: View {
                 .textFieldStyle(RoundedBorderTextFieldStyle())
                 .padding(.horizontal)
                 .textInputAutocapitalization(.never)
+                .onChange(of: textInput) { newValue in
+                                    userprofile.name = newValue
+                                }
         }
+        
         .background(Color.background)
     }
 }
 
-#Preview {
-    NameView()
-}
+//#Preview {
+//    NameView()
+//}
