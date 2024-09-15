@@ -13,7 +13,7 @@ class UserProfile: ObservableObject, Codable {
     @Published var name: String
     @Published var age: Int
     @Published var country: String
-    @Published var hobbies: [String]
+    @Published var hobbies: String
     @Published var mbti: String
     @Published var funFacts: String
     
@@ -21,7 +21,7 @@ class UserProfile: ObservableObject, Codable {
         case name, age, country, hobbies, mbti, funFacts
     }
     
-    init(name: String, age: Int, country: String, hobbies: [String], mbti: String, funFacts: String) {
+    init(name: String, age: Int, country: String, hobbies: String, mbti: String, funFacts: String) {
         self.name = name
         self.age = age
         self.country = country
@@ -35,7 +35,7 @@ class UserProfile: ObservableObject, Codable {
         name = try container.decode(String.self, forKey: .name)
         age = try container.decode(Int.self, forKey: .age)
         country = try container.decode(String.self, forKey: .country)
-        hobbies = try container.decode([String].self, forKey: .hobbies)
+        hobbies = try container.decode(String.self, forKey: .hobbies)
         mbti = try container.decode(String.self, forKey: .mbti)
         funFacts = try container.decode(String.self, forKey: .funFacts)
     }

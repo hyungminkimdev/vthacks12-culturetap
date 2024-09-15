@@ -101,8 +101,8 @@
 		BAB734342C96A3CE0047DE51 /* ProfileView */ = {
 			isa = PBXGroup;
 			children = (
-				BAB734352C96A4020047DE51 /* SubViews */,
 				BA1CBBE92C96290F0043CDED /* ProfileView.swift */,
+				BAB734352C96A4020047DE51 /* SubViews */,
 			);
 			path = ProfileView;
 			sourceTree = "<group>";

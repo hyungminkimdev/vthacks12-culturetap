@@ -10,7 +10,7 @@ import SwiftUI
 struct ContentView: View {
     @State private var id: String = ""
     @State private var password: String = ""
-    @StateObject var userprofile = UserProfile(name: "", age: 0, country: "", hobbies: [], mbti: "", funFacts: "")
+    @StateObject var userprofile = UserProfile(name: "", age: 0, country: "", hobbies: "", mbti: "", funFacts: "")
 
     var body: some View {
         NavigationStack {

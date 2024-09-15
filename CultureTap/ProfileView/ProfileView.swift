@@ -46,7 +46,7 @@ struct ProfileView: View {
             
             Button(action: {
                 currentStep += 1
-                print("Name: \(userprofile.name), Age: \(userprofile.age), City: \(userprofile.country)")
+                print("Name: \(userprofile.name), Age: \(userprofile.age), City: \(userprofile.country), Hobbies: \(userprofile.hobbies), FunFacts: \(userprofile.funFacts), MBTI: \(userprofile.mbti)")
             }){
                 Text("Next")
                     .font(.headline)

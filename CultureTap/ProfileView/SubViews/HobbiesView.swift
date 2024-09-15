@@ -9,11 +9,31 @@ import SwiftUI
 
 struct HobbiesView: View {
     @ObservedObject var userprofile: UserProfile
+    @State var textInput: String = ""
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            HStack {
+                Text("Add your hobbies")
+                    .foregroundStyle(Color.white)
+                Spacer()
+            }
+            .padding(.horizontal)
+            
+            TextField("Enter your name", text: $textInput)
+                .textFieldStyle(RoundedBorderTextFieldStyle())
+                .padding(.horizontal)
+                .textInputAutocapitalization(.never)
+                .onChange(of: textInput) { newValue in
+                    userprofile.hobbies = newValue
+                                }
+        }
+        
+        .background(Color.background)
     }
 }
 
 //#Preview {
-//    HobbiesView()
+//    HobbiesView(userprofile: )
+//        .ObservedObject(userprofile)
 //}

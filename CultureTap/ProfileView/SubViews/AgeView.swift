@@ -9,7 +9,7 @@ import SwiftUI
 
 struct AgeView: View {
     @ObservedObject var userprofile: UserProfile
-    @State var textInput: String = "0"
+    @State var textInput: String = ""
 
     var body: some View {
         VStack {
